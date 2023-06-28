@@ -1,0 +1,27 @@
+1. The `findCombinations` function takes in an array (`arr`) and a target value (`target`) as input.
+
+2. It initializes an empty object `complementDict` to store the complements of the target value and an empty array `result` to store the pairs that sum up to the target value.
+
+3. The code then iterates through the elements of the input array using a `for...of` loop.
+
+4. For each element, it calculates the complement by subtracting it from the target value (`target - num`).
+
+5. If the complement exists in the `complementDict`, it means that there is a pair that sums up to the target value. The code iterates through each pair in `complementDict[complement]` using a nested `for...of` loop and appends the pair and the current element to the `result` array.
+
+6. If the complement doesn't exist in `complementDict`, it initializes an empty array for that complement and adds the current element to it.
+
+7. After iterating through the input array, the code has found all the pairs that sum up to the target value and stored them in the `result` array.
+
+8. The `result` array is then flattened using the `flat` method and sorted in ascending order using the `sort` method, resulting in the `mergedArray`.
+
+9. The target value is doubled by multiplying it by 2 (`target *= 2`).
+
+10. An empty array `combinations` is initialized to store the combinations of digits that sum up to the double of the target value.
+
+11. The code uses nested loops to iterate through the `mergedArray` and check for combinations that sum up to the double of the target value. If a combination is found, it is added to the `combinations` array.
+
+12. Finally, the `combinations` array is returned as the output.
+
+13. Outside the `findCombinations` function, the provided sample input array and target value are passed to the function, and the resulting combinations are printed to the console using `console.log`.
+
+The JavaScript code essentially performs the same logic as the Python code to find pairs of integers that sum up to the target value and then finds combinations that sum up to the double of the target value. The only differences are in the syntax and specific methods used in JavaScript compared to Python.
